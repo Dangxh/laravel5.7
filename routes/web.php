@@ -24,4 +24,4 @@ Route::get('api/user', function(){
 });
 
 //处理用户登录逻辑
-Route::post('api/login', 'UserController@login');
+Route::get('api/login', 'UserController@login');

@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreBlogPost;
 
 class UserController extends Controller
 {
@@ -12,8 +12,8 @@ class UserController extends Controller
      * @name 处理用户登录
      * @author Dangxh
      */
-    public function login(Request $request){
-        $data = $request->all();
-        return 123;
+    public function login(StoreBlogPost $request){
+        dd(11);
+        $validate = $request->validate();
     }
 }
