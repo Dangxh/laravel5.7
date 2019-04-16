@@ -25,3 +25,14 @@ Route::get('api/user', function(){
 
 //处理用户登录逻辑
 Route::get('api/login', 'UserController@login');
+
+//路由命名
+Route::get('user/name', function (){
+   return 'user-name';
+})->name('username');
+
+Route::get('user/rename', function (){
+//    $url = route('username');
+//    var_dump($url);
+    return redirect()->route('username');
+});
