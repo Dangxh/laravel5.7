@@ -6,13 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public $table = 'users';
-
-    /**
-     * @name 处理用户
-     * @return string
-     */
-    public function login(){
-        return 'login';
+    //获取用户的手机号码
+    public function getPhone(){
+        return $this->hasMany('App\Phone', 'userId');
     }
 }

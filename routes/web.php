@@ -36,3 +36,8 @@ Route::get('user/rename', function (){
 //    var_dump($url);
     return redirect()->route('username');
 });
+
+Route::get('flight/{id}', "UserController@flight");
+//Route::get('{username}/{password}/{intro}', "UserController@user");
+Route::get('/user/{userId}/{phone}', "UserController@phone");
+Route::get('/phone/{id}', "UserController@getPhone");
